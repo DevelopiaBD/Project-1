@@ -51,27 +51,42 @@ body {
 
 /* globals.css */
 .bg-gradient-svg {
-  background-image: url('../asstes/Gradient.svg');
-  background-position: right top;
-  background-repeat: no-repeat;
+  background: url('../asstes/Gradient.svg');
+  background-position: 100% 100%;
+  background-repeat: no-repeat; 
   background-size: 1000px 1000px;
+
 }
+
+
 .bg-gradient-svg-2 {
   background-image: url('../asstes/Gradient-2.svg');
   background-position: calc(50% - 150px) center;
   background-repeat: no-repeat;
-  background-size: 600px;
+  background-size: 500px;
+
 }
+
 .bg-gradient-svg-3 {
   background-image: url('../asstes/Gradient-3.svg');
-  background-position: calc(50% + 450px) calc(50% + 150px);
+  background-position: calc(50% + 150px) calc(50% + 50px);
   background-repeat: no-repeat;
-  background-size: 700px;
+  background-size:  1000px 500px;
+
 }
 @media (max-width: 640px) {
   .bg-gradient-svg {
-    background-size: 400px 400px; /* Adjust size as needed for smaller screens */
+    background-size: 100% 100%; /* Adjust size as needed for smaller screens */
     background-position: center;
+  }
+}
+@media (max-width: 767px) {
+  .bg-gradient-svg-2 {
+    background-image: url('../asstes/Gradient-2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    height: 500px;
   }
 }
 @media (max-width: 640px) {
@@ -79,17 +94,22 @@ body {
     background-image: url('../asstes/Gradient-2.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 400px;
+    background-size: 70%;
   }
 }
+
+
 @media (max-width: 640px) {
   .bg-gradient-svg-3 {
     background-image: url('../asstes/Gradient-3.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 500px;
+    background-size: 600px;
+    height: 700px;
   }
 }
+
+
 @media (max-width: 518px) {
   .fix-1 {
     transform: scale(0.7); /* Scales the div to 80% of its original size */
