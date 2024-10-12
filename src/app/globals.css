@@ -2,26 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* styles/globals.css */
+body {
+  background-color: #1b1b1b;
+  margin: 0; /* Optional: remove default margin */
+  padding: 0rem; /* Optional: remove default padding */
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* styles/globals.css */
+@font-face {
+  font-family: 'Humane';
+  src: url('./fonts/Humane-Regular.woff2') format('woff2'),
+    url('./fonts/Humane-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Humane';
+  src: url('./fonts/Humane-Bold.woff2') format('woff2'),
+    url('./fonts/Humane-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'n27';
+  src: url('./fonts/n27-regular-webfont.woff2') format('woff2'),
+    url('./fonts/n27-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply the Humane font globally */
+html,
+body {
+  font-family: 'Humane', sans-serif;
+}
+.font-n27 {
+  font-family: 'n27', sans-serif;
+}
+
+/* Custom class for Humane font */
+.font-humane {
+  font-family: 'Humane', sans-serif;
+}
+
+/* globals.css */
+.bg-gradient-svg {
+  background-image: url('../asstes/Gradient.svg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 1000px 1000px;
+}
+.bg-gradient-svg-2 {
+  background-image: url('../asstes/Gradient-2.svg');
+  background-position: calc(50% - 150px) center;
+  background-repeat: no-repeat;
+  background-size: 600px;
+}
+.bg-gradient-svg-3 {
+  background-image: url('../asstes/Gradient-3.svg');
+  background-position: calc(50% + 450px) calc(50% + 150px);
+  background-repeat: no-repeat;
+  background-size: 700px;
+}
+@media (max-width: 640px) {
+  .bg-gradient-svg {
+    background-size: 400px 400px; /* Adjust size as needed for smaller screens */
+    background-position: center;
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 640px) {
+  .bg-gradient-svg-2 {
+    background-image: url('../asstes/Gradient-2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px;
+  }
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (max-width: 640px) {
+  .bg-gradient-svg-3 {
+    background-image: url('../asstes/Gradient-3.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+  }
+}
+@media (max-width: 518px) {
+  .fix-1 {
+    transform: scale(0.7); /* Scales the div to 80% of its original size */
+  }
+}
+@media (max-width: 365px) {
+  .fix-1 {
+    transform: scale(0.6); /* Scales the div to 80% of its original size */
   }
 }
